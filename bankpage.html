@@ -9,17 +9,29 @@
     />
     <title>Bank Site</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    
 
+    <style>
+      @media (max-width: 480px) {
+        .main {
+          display: grid;
+          grid-template-columns: 1fr !important;
+        }
+
+        .inmain {
+          display: grid;
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="max-w-full">
     <h1 class="text-cyan-500 rounded pt-3 text-center text-5xl font-semibold">
       Welcome to
     </h1>
     <h1 class="text-cyan-900 rounded pb-3 text-center text-5xl font-semibold">
       <span class="text-pink-500">>Developer<</span> Bank Limited
     </h1>
-    <div class="grid gap-4 grid-cols-3 mt-7 ml-4 mr-4 font-semibold">
+    <div class="main grid gap-4 grid-cols-3 mt-7 ml-4 mr-4 font-semibold">
       <div class="bg-cyan-500 text-white rounded p-16 text-center text-xl">
         <h3>Deposit</h3>
         <h4>$<span id="deposit">00</span></h4>
@@ -34,7 +46,7 @@
       </div>
     </div>
     <!-- input filed -->
-    <div class="grid gap-4 grid-cols-2 mt-7 ml-4 mr-4">
+    <div class="inmain grid gap-4 grid-cols-2 mt-7 ml-4 mr-4">
       <div class="bg-cyan-900 text-white rounded p-16 text-center text-xl">
         <h3 style="position: relative; bottom: 10px">
           Give <span class="text-cyan-500">Deposit</span> Amound $
@@ -64,9 +76,13 @@
           Withdraw
         </button>
       </div>
-      
     </div>
-    <button id="logout-button" class="text-white font-semibold bg-cyan-900 mt-4 px-7 py-1 rounded ml-4">Logout</button>
+    <button
+      id="logout-button"
+      class="text-white font-semibold bg-cyan-900 mt-4 px-7 py-1 rounded ml-4"
+    >
+      Logout
+    </button>
     <script src="js/bank.js"></script>
   </body>
 </html>

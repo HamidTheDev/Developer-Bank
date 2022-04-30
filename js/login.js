@@ -18,4 +18,3 @@ document.getElementById("login-button").addEventListener("click", function () {
     window.alert("Please Fill The Form");
   }
 });
-
